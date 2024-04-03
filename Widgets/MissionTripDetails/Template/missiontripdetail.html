@@ -1,0 +1,61 @@
+<div class="hero-wrapper">
+        <div class="header-wrapper">
+    {% for elements in DataSet1 %}
+        <img class="trip-hero" src="{{elements.Link}}" > 
+        <div class="overlay">
+            <h2 class="trip-name">{{elements.Nickname}}</h2>
+            <h3 class="trip-dates">{{elements.Start_Date}} - {{elements.End_Date}}</h3>
+        </div>
+    </div>
+    <div class="description-wrapper">
+        <p class="long-description">{{elements.Long_Description}}</p>
+        <div class="button-container">
+            <a class="register-join" href="https://www.perimeter.org/pages/outreach-volunteer/global-outreach/global-outreach/pages/mission-trip-application/?pledgecampaignid={{elements.Pledge_Campaign_ID}}">Register to Join</a>
+            <a class="support-journey" href="https://perimeter.onlinegiving.org/donate/form/1385?mp_campaign_id={{elements.Pledge_Campaign_ID}}#!/">Support Journey</a>
+        </div>
+    </div>
+            {% endfor %}
+    </div>
+{% for elements in DataSet1 %}
+<div class="map-wrapper">
+        <iframe
+  width="450"
+  height="250"
+  frameborder="0" style="border:0"
+  referrerpolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAZHoGlr-YDI0UuYRbskORnwboM5EvdH1s&q={{elements.Destination_Name}}&zoom=7"
+  >
+</iframe>
+       {% endfor %} 
+</div>
+
+<div class="details-wrapper">
+        <div class="trip-participants">
+                <h2 class="participants-header">Meet the Team</h2>
+            <div class="card-container">
+ {% for elements in DataSet2 %}
+  <a href="insert link">
+  <div class="card">
+   <div class="avatar">
+    {% if elements.Photo_URL %}
+    <img src="{{elements.Photo_URL}}" alt="Person" style="width:100%">
+    {% else %}
+    <img src="https://cdn.jsdelivr.net/gh/perimeterchurch/widget-css@07451adc9a3cef9eed03741f87d8e315392a395a/customwidgets/defaultprof.png" alt="Person" style="width:100%">    
+    {% endif %}
+   </div>
+      <p class="card-title">{{elements.Full_Name}}</p>
+    </div>
+  </a>
+                {% endfor %}
+</div>
+        </div>
+</div>
+
+<div class="bgColorWrapper">
+    <div class="details-wrapper">
+    <div class="disclaimer-wrapper">
+        <h3>DONATION DISCLAIMER</h3>
+        <p class="disclaimer">Donations are tax-deductible and must be made payable to Perimeter Church, who is training and sending the team and who requests that this be above your regular tithe and offerings to your local church. If I raise more than 100%, the additional funds will be allocated to the team fund, and, after that, used at the discretion of the Global Outreach Ministry Team.</p>
+    </div>
+</div>
+    </div>
