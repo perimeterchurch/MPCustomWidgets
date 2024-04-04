@@ -1,0 +1,85 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+}
+
+.load-more-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 20px auto;
+    display: block;
+}
+
+.hide-sermon {
+    display: none;
+}
+
+.series-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.series-card {
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 300px; /* adjust as needed */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.series-image-wrapper {
+    width: 100%;
+    height: 200px; /* adjust as needed */
+    overflow: hidden;
+}
+
+.series-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures the image covers the area */
+}
+
+.series-info-wrapper {
+    padding: 15px;
+    text-align: center;
+}
+
+.series-title {
+    color: #333;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.series-dates {
+    color: #777;
+    margin: 5px 0 15px;
+    font-size: 1em;
+}
+
+/* Hover effect for series-card */
+.series-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .series-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .series-card {
+        width: 80%;
+    }
+}

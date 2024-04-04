@@ -2,9 +2,9 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[api_custom_GroupWidget]') AND type in (N'P', N'PC'))
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[api_custom_Mission_Trip_Detail_Widget]') AND type in (N'P', N'PC'))
 BEGIN
-EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[api_custom_GroupWidget] AS' 
+EXEC dbo.sp_executesql @statement = N'CREATE PROCEDURE [dbo].[api_custom_Mission_Trip_Detail_Widget] AS' 
 END
 GO
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sermon Series Finder</title>
+    <link rel="stylesheet" href="/Widgets/SermonSeriesFinder/Assets/SermonSeriesFinder.css">
+    <!-- Add your additional head content such as stylesheets or scripts here -->
+</head>
+<body>
+    <div class="series-wrapper">
+        <!-- Loop through the sermon series information -->
+        {% for series in DataSet2 %}
+        <div class="series-card">
+            <div class="series-image-wrapper">
+                <img class="series-image" src="{{series.Photo_URL}}" alt="{{series.Series_Title}} Image">
+            </div>
+            <div class="series-info-wrapper">
+                <h2 class="series-title">{{series.Series_Title}}</h2>
+                <h3 class="series-dates">
+                    {% if series.Start_Date == series.End_Date %}
+                        {{ series.Start_Date }}
+                    {% else %}
+                        {{ series.Start_Date }} - {{ series.End_Date }}
+                    {% endif %}
+                </h3>
+                
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <button id="loadMore" class="load-more-btn">See More</button>
+
+</body>
+</html>
