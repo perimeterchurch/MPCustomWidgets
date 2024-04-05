@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sermon Finder</title>
+    <link rel="stylesheet" href="Widgets/SermonSeriesFinder/Assets/SermonSeriesFinder.css">
+</head>
+<body>
+    <div class="sermons-wrapper">
+        {% for sermon in DataSet1 %}
+        <div class="sermon-card">
+            <div class="flex-container">
+                <img src="{{ sermon.Photo_URL }}" alt="Easter" class="sermon-image">
+                <div class="sermon-info-wrapper">
+                    <p class="mostrecentsermon">MOST RECENT SERMON</p>
+                    <h2 class="sermon-title">{{ sermon.Sermon_Title }}</h2>
+                    <h3 class="series-title">{{ sermon.Series_Title }}</h3>
+                    <h4 class="sermon-speaker">{{ sermon.Full_Name }}</h4>
+                    <p class="sermon-date">{{ sermon.Sermon_Date }}</p>
+                    <p class="sermon-description">{{ sermon.Description }}</p>
+                    <div class="sermon-links">
+                        <a class="sermon-series-link" href="{{ sermon.Video_Link }}" >View Full Series</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

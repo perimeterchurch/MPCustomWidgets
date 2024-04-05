@@ -83,3 +83,93 @@ body {
         width: 80%;
     }
 }
+
+.sermon-wrapper {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.sermon-content {
+    background-color: #7D3C98; /* Purple background */
+    padding: 20px;
+    width: 250px; /* Adjust width as needed */
+    margin-right: 20px; /* Space between sidebar and main content */
+}
+
+
+.sermon-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sermon-info {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.sermon-link {
+    color: #F7DC6F; /* Gold color for links */
+    text-decoration: none;
+}
+
+/* ... Your CSS above */
+
+.flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically at the top */
+}
+
+.sermon-card {
+    /* ... Other styles */
+    display: flex; /* This makes it a flex container */
+    flex-direction: row; /* Lay out children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: center;
+    padding: 20px;
+}
+
+.sermon-image {
+    flex: 0 0 120px; /* Don't grow, don't shrink, start at 120px wide */
+    width: 50%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    margin-right: 15px; /* Add some space between the image and the info */
+}
+
+.sermon-info-wrapper {
+    flex: 1; /* Take up the remaining space */
+    /* Padding is already defined in your styles */
+}
+
+.mostrecentsermon {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Add an arrow after the sermon-series-link and remove the blue hyperlink color */
+.sermon-series-link {
+    color: #333; /* Change to your preferred color */
+    text-decoration: none; /* Removes underline */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sermon-card {
+        flex-direction: column; /* Stack children vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .sermon-image {
+        width: 100%; /* Full width on small screens */
+        flex: 0 0 auto; /* Override previous flex-basis */
+    }
+
+    .sermon-info-wrapper {
+        width: 100%; /* Full width on small screens */
+    }
+}
+
+
